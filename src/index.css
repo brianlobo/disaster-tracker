@@ -14,19 +14,39 @@ body {
   }
 }
 
+.marker {
+  cursor: pointer;
+}
+
 .fire-marker-icon {
   font-size: 2rem;
-  color: #ff4141;
+  color: #ff9501;
+  stroke: black;
+}
+
+.fire-marker-icon:hover {
+  color: hsl(35, 100%, 76%);
 }
 
 .storm-marker-icon {
   font-size: 2.5rem;
   color: blue;
+  
+}
+
+.storm-marker-icon:hover {
+  color: rgb(84, 84, 253);  
 }
 
 .volcano-marker-icon {
   font-size: 2.5rem;
   color: #e90432; 
+  stroke-width: .8px !important;
+  stroke: black;
+}
+
+.volcano-marker-icon:hover {
+  color: #ff879f; 
 }
 
 .loader {
@@ -46,16 +66,35 @@ body {
 }
 
 .info-box {
+  display: flex;
   position: absolute;
   top: 50px;
-  right: 50px;
-  min-height: 180px;
-  padding: 20px;
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 10px;
-  font-size: 18px;
+  left: 50px;
+  max-height: 260px;
+  width: 30%;
+  /* padding: 20px; */
+  /* background-color: rgb(255, 255, 255); */
+  background-color: #062f4f;
+  border-radius: 5px;
+  font-size: 1em;
   color: white;
+  overflow: hidden;
 } 
+
+.info-box div {
+  width: 50%;
+  /* padding: 10px;s */
+  overflow: hidden;
+  /* margin: 10px; */
+}
+
+.info-box div img { 
+  /* background-size: cover; */
+  position: absolute;
+  top: -50px;
+  width: 75%;
+  /* left: 100px; */
+}
 
 .info-box ul {
   list-style-type: none;
@@ -67,6 +106,49 @@ body {
 
 }
 
+.event-detail {
+  padding: 10px 15px;
+}
+
+.event-detail button {
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #00b947; 
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.event-detail button:hover {
+  background-color: #019339;
+  color: rgb(216, 216, 216);
+
+}
+
+.close-event-detail {
+  cursor: pointer;
+}
+
+.close-event-detail:hover {
+  color:#e02342;
+}
+
+.button-icon {
+  margin-right: 10px;
+  font-size: 1.25em;
+  vertical-align: bottom;
+}
+
+.event-detail h2 {
+  text-align: center;
+  margin: 0;
+}
+
 .footer {
   padding: 10px;
   background-color: #062f4f;
@@ -76,9 +158,15 @@ body {
   left: 0;
 }
 
+.footer a {
+  text-decoration: none;
+  color: inherit;
+  text-decoration: inherit; 
+}
+
 .footer h1 {
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   padding: 0;
   margin: 0;
   text-align: center;

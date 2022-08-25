@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <h1>Disaster Tracker</h1>
-            <h3><SiNasa className="nasa-icon"/>(Powered by NASA's EONET API)</h3>
+            <h3><SiNasa className="nasa-icon"/><a href={ "https://eonet.gsfc.nasa.gov/" } target="_blank">Powered by NASA's EONET API</a></h3>
         </footer>
     )    
 }
